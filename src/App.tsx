@@ -1,8 +1,11 @@
 import { useState } from 'react';
-import { Header } from './components/Header'
-import { Dashboard } from './components/Dashboard'
-import { GlobalSytle } from './styles/global'
+
+import { TransactionProvider } from './hooks/useTransactions';
+import { Header } from './components/Header';
+import { Dashboard } from './components/Dashboard';
+import { GlobalSytle } from './styles/global';
 import { NewTransactionModal } from './components/NewTransactionModal';
+
 
 
 
@@ -22,7 +25,7 @@ import { NewTransactionModal } from './components/NewTransactionModal';
   }
 
   return (
-    <>
+    <TransactionProvider>
      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/>
      <Dashboard/>
      <NewTransactionModal
@@ -31,7 +34,7 @@ import { NewTransactionModal } from './components/NewTransactionModal';
      />
      <GlobalSytle/>
     
-    </>
+    </TransactionProvider>
   );
 }
 
