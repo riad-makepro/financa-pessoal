@@ -36,8 +36,9 @@ input {
 }
 
 .btnCadastro{
+    border: 0;
 
-background: var(--green);
+    background: var(--green);
 }
 
 button{
@@ -49,7 +50,7 @@ button{
     
     color: #FFF;
     border-radius: 0.25rem;
-    border: 0   ;
+    border: 1px solid #ccc ;
     font-size: 1rem;
     margin-top: 1.5rem;
     transition: filter 0.2s;
